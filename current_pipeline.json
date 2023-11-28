@@ -1,0 +1,47 @@
+{
+  "compute_statistics_before": false,
+  "compute_statistics_after": false,
+  "steps": [
+    {
+      "id":0,
+      "name": "clahe",
+      "parameters": [
+        {
+          "name": "clip_limit",
+          "value": 2.0
+        },
+        {
+          "name": "tile_grid_size",
+          "value": 20
+        }
+      ]
+    },
+    {
+        "id":1,
+        "name": "rgb_eq",
+        "parameters": []
+    },
+    {
+        "id":2,
+        "name": "unsharp_mask",
+        "parameters": [
+            {
+                "name": "kernel_size",
+                "value": 20
+            },
+            {
+                "name": "sigma",
+                "value": 2.0
+            },
+            {
+                "name": "amount",
+                "value": 2.0
+            },
+            {
+                "name": "threashold",
+                "value": 0.0
+            }
+        ]
+    }
+  ]
+}
