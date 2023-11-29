@@ -69,7 +69,8 @@ for step in pipeline['steps']:
     steps.append(module)
 
 #build pipeline using functool reduce
-pipeline = reduce(lambda x, y: getattr(x, y), steps, src.modules)
+def pipeline(img):
+    return reduce(lambda x, y: y(x), steps, img)
 
 
 #loop through files in directory
@@ -89,7 +90,7 @@ for file in files:
 
 
 #check if compute_statistics_after flag in pipeline is true
-if pipeline.compute_statistics_after == True:
+if pipeline['compute_statistics_after'] == True:
     #compute statistics
     print("this is not yet implemented...")
    
