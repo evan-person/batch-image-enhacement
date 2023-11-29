@@ -63,7 +63,7 @@ for step in pipeline_json['steps']:
     module = step['name']
     #import module from src folder modules.py file
 
-    modules = importlib.import_module('src.modules')
+    modules = importlib.import_module('src.processing')
     #use getattr to get the function from the modules as a function with the string name of the module being imported
     module = getattr(modules, module)
 
