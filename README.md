@@ -32,11 +32,33 @@ parameters:
 Applies an unsharp mask to image to enhance edges
 function name: unsharp_mask()
 parameters:
-- kernel_size: default is (5,5), size of gaussian blur filter used
+- kernel_size: default is 5, size of gaussian blur filter used, assuming square filter of equal dimension
 - sigma: default is 2.0, sigma of gaussian blur filter used
 - amount: default is 2.0, amount of "sharpness" to apply
 - threshold: default is 0, if positive non-zero, sets threshold for mask to use original image instead of 
-kernel_size=(5, 5), sigma=2.0, amount=2.0, threshold=0
+
+
+
+## Median filter
+Applies a median filter to image to reduce shot noise
+parameters:
+- kernel_size: default is 7
+
+## Gaussian blur
+Applies a Gaussian blur to the image
+parameters:
+- kernel_size: default is 9, assumes square filter
+- sigma: default is 0, sigma of Gaussian
+
+## Bilateral filter
+Applies a bilateral filter to the image
+parameters:
+- diameter: default is 9
+- sigma_color: default is 100
+- sigma_space: default is 100
+
+
+
 
 
 # Notes:
@@ -47,4 +69,8 @@ kernel_size=(5, 5), sigma=2.0, amount=2.0, threshold=0
 - batch normalization
 - add statistics computation
 - add median, bilinear, and gaussian filters
+<<<<<<< HEAD
 - tests for inputs
+=======
+- tests for input and modules
+>>>>>>> a3ec5ae (Added smoothing filters)

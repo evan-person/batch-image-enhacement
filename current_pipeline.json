@@ -5,7 +5,7 @@
     {
       "id":0,
       "name": "clahe",
-      "parameters": [
+      "params": [
         {
           "name": "clip_limit",
           "value": 2.0
@@ -19,15 +19,15 @@
     {
         "id":1,
         "name": "rgb_eq",
-        "parameters": []
+        "params": [{}]
     },
     {
         "id":2,
         "name": "unsharp_mask",
-        "parameters": [
+        "params": [
             {
                 "name": "kernel_size",
-                "value": 20
+                "value": 5
             },
             {
                 "name": "sigma",

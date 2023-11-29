@@ -57,4 +57,22 @@ def unsharp_mask(image,**kwargs):
     return sharpened
 
 
-       
+def median_blur(image,**kwargs):
+    kernel_size = kwargs.get('kernel_size',7)
+    median_blurred_img = cv2.medianBlur(image, kernel_size)
+    return median_blurred_img
+
+def gaussian_blur(image,**kwargs):
+    kernel_size = kwargs.get('kernel_size',9)
+    sigma = kwargs.get('sigma',0)
+    gaussian_blurred_img = cv2.GaussianBlur(image, (kernel_size, kernel_size), sigma)
+    return gaussian_blurred_img
+
+def bilateral_filter(image,**kwargs):
+    diameter = kwargs.get('diameter',9)
+    sigma_color = kwargs.get('sigma_color',100)
+    sigma_space = kwargs.get('sigma_space',100)
+    bilateral_filtered_img = cv2.bilateralFilter(image, diameter, sigma_color, sigma_space)
+    return bilateral_filtered_img
+
+
