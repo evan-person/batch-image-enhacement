@@ -47,3 +47,4 @@ kernel_size=(5, 5), sigma=2.0, amount=2.0, threshold=0
 - batch normalization
 - add statistics computation
 - add median, bilinear, and gaussian filters
+- tests for inputs
