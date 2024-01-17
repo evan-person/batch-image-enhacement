@@ -69,8 +69,4 @@ parameters:
 - batch normalization
 - add statistics computation
 - add median, bilinear, and gaussian filters
-<<<<<<< HEAD
-- tests for inputs
-=======
 - tests for input and modules
->>>>>>> a3ec5ae (Added smoothing filters)
